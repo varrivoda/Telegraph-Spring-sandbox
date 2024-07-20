@@ -1,8 +1,7 @@
-package org.example;
+package org.example.telegraph_sandbox;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

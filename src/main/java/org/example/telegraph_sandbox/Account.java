@@ -1,7 +1,9 @@
-package org.example;
+package org.example.telegraph_sandbox;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Account extends TelegraphObject{
     @JsonProperty("name")
     private String name;
@@ -9,7 +11,6 @@ public class Account extends TelegraphObject{
     private String apiKey;
 
     public Account(String name, String apiKey) {
-        super();
         this.name=name;
         this.apiKey = apiKey;
     }
