@@ -1,13 +1,14 @@
-package org.example.telegraph_sandbox;
+package org.example.telegraph_sandbox.objects;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.example.telegraph_sandbox.TelegraphObject;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Account extends TelegraphObject{
-    @JsonProperty("name")
+public class Account extends TelegraphObject {
+    @JsonProperty
     private String name;
-    @JsonProperty("apiKey")
+    @JsonProperty
     private String apiKey;
 
     public Account(String name, String apiKey) {

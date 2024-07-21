@@ -1,6 +1,7 @@
 package org.example.telegraph_sandbox;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.example.telegraph_sandbox.objects.Account;
 
 import java.util.HashMap;
 import java.util.List;

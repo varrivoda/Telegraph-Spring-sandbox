@@ -16,7 +16,10 @@ public class TelegraphExecutor {
         objectMapper.writeValueAsString(method);
         //HTTP REQUEST...
         //MOCK RESPONSE:
-        String responseContent = "{\"name\":\"Andrey\", \"apiKey\":\"abcdefg123456\"}";
+//these properties are bad------------------------------------------------------->-------------------------------------------------------------------------------------------v-------------------------------------------------------vvvvvvvvvv------v
+//        String responseContent = "{\"path\":\"My-title-07-21-4\",\"url\":\"https:\\/\\/telegra.ph\\/My-title-07-21-4\",\"title\":\"My title\",\"description\":\"\",\"author_name\":\"Random author\",\"content\":[\"My content\"],\"views\":0,\"can_edit\":true}";
+        String responseContent = "{\"path\":\"My-title-07-21-4\",\"url\":\"https:\\/\\/telegra.ph\\/My-title-07-21-4\",\"title\":\"My title\",\"description\":\"\",\"authorName\":\"Random author\",\"content\":[\"My content\"],\"canEdit\":true}";
+        //thois is for Account "{\"name\":\"Andrey\", \"apiKey\":\"abcdefg123456\"}";
 
         return method.deserializeResponse(responseContent);
     }
