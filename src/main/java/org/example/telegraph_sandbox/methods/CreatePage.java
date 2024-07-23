@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.example.telegraph_sandbox.Node;
 import org.example.telegraph_sandbox.TelegraphMethod;
+import org.example.telegraph_sandbox.TelegraphResponse;
 import org.example.telegraph_sandbox.objects.Page;
 import org.springframework.stereotype.Component;
 
@@ -71,7 +72,11 @@ public class CreatePage extends TelegraphMethod<Page> {
 
     @Override
     public Page deserializeResponse(String answer) throws IOException {
-        return OBJECT_MAPPER.readValue(answer, new TypeReference<Page>(){});
+
+
+        TelegraphResponse<Page> result = OBJECT_MAPPER.readValue(answer, new TypeReference<TelegraphResponse<Page>>(){});
+        if(result.getOk()) return result.getResult();
+        else throw new IOException();
     }
 
 }

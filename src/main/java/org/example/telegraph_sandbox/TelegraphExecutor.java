@@ -18,8 +18,10 @@ public class TelegraphExecutor {
         //MOCK RESPONSE:
 //these properties are bad------------------------------------------------------->-------------------------------------------------------------------------------------------v-------------------------------------------------------vvvvvvvvvv------v
 //        String responseContent = "{\"path\":\"My-title-07-21-4\",\"url\":\"https:\\/\\/telegra.ph\\/My-title-07-21-4\",\"title\":\"My title\",\"description\":\"\",\"author_name\":\"Random author\",\"content\":[\"My content\"],\"views\":0,\"can_edit\":true}";
-        String responseContent = "{\"path\":\"My-title-07-21-4\",\"url\":\"https:\\/\\/telegra.ph\\/My-title-07-21-4\",\"title\":\"My title\",\"description\":\"\",\"authorName\":\"Random author\",\"content\":[\"My content\"],\"canEdit\":true}";
+        //String responseContent = "{\"path\":\"My-title-07-21-4\",\"url\":\"https:\\/\\/telegra.ph\\/My-title-07-21-4\",\"title\":\"My title\",\"description\":\"\",\"authorName\":\"Random author\",\"content\":[\"My content\"],\"canEdit\":true}";
         //thois is for Account "{\"name\":\"Andrey\", \"apiKey\":\"abcdefg123456\"}";
+        //version 3 for Page
+        String responseContent = "{\"ok\":true,\"result\":{\"path\":\"My-title-07-23-3\",\"url\":\"https:\\/\\/telegra.ph\\/My-title-07-23-3\",\"title\":\"My title\",\"description\":\"\",\"author_name\":\"Random author\",\"content\":[\"My content\"],\"views\":0,\"can_edit\":true}}";
 
         return method.deserializeResponse(responseContent);
     }

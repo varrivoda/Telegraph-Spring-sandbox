@@ -3,6 +3,7 @@ package org.example.telegraph_sandbox.methods;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.example.telegraph_sandbox.TelegraphMethod;
+import org.example.telegraph_sandbox.TelegraphResponse;
 import org.example.telegraph_sandbox.objects.Account;
 import org.springframework.stereotype.Component;
 
@@ -20,7 +21,7 @@ public class CreateAccount extends TelegraphMethod<Account> {
 
     @Override
     public Account deserializeResponse(String answer) throws IOException {
-        return OBJECT_MAPPER.readValue(answer, new TypeReference<Account>(){});
+        return OBJECT_MAPPER.readValue(answer, new TypeReference<TelegraphResponse<Account>>(){});
     }
 
 }

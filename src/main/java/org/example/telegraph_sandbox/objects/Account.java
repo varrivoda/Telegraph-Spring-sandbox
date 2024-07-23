@@ -5,7 +5,7 @@ import org.example.telegraph_sandbox.TelegraphObject;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Account extends TelegraphObject {
+public class Account implements TelegraphObject {
     @JsonProperty
     private String name;
     @JsonProperty
